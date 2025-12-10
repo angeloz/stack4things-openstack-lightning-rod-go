@@ -14,3 +14,35 @@ dist
 STUFF/
 iotronic_lightningrod/modules/test.py
 iotronic_lightningrod/modules/vfs_*
+
+# Go-specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+go.work
+bin/
+
+# IDE
+.vscode/
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config files (local overrides)
+*.local.conf
+*.local.json
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/

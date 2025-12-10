@@ -1,0 +1,32 @@
+{
+  "iotronic": {
+    "board": {
+      "uuid": "00000000-0000-0000-0000-000000000000",
+      "code": "<REGISTRATION-TOKEN>",
+      "name": "my-iot-device",
+      "status": "first_boot",
+      "type": "raspberry",
+      "mobile": false,
+      "agent": "iotronic-agent",
+      "created_at": "2024-01-01T00:00:00.000000",
+      "updated_at": "2024-01-01T00:00:00.000000",
+      "location": {
+        "latitude": null,
+        "longitude": null,
+        "altitude": null
+      },
+      "extra": {}
+    },
+    "wamp": {
+      "registration-agent": {
+        "url": "wss://iotronic.example.com:8181",
+        "realm": "s4t"
+      },
+      "main-agent": {
+        "url": "wss://iotronic.example.com:8181",
+        "realm": "s4t"
+      }
+    },
+    "extra": {}
+  }
+}

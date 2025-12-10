@@ -1,0 +1,29 @@
+[Unit]
+Description=Stack4Things Lightning-rod (Go Edition)
+Documentation=https://github.com/MDSLab/iotronic-lightning-rod-go
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/local/bin/lightning-rod --config /etc/iotronic/iotronic.conf
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Security hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/iotronic /var/log/iotronic /etc/nginx/conf.d
+
+# Resource limits
+LimitNOFILE=65536
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target
