@@ -1,0 +1,36 @@
+# Lightning-rod (Go) Configuration Example
+# Copy this file to /etc/iotronic/iotronic.conf and modify as needed
+
+[lightningrod]
+# Home directory for Lightning Rod data
+home = /var/lib/iotronic
+
+# Log level: debug, info, warn, error
+log_level = info
+
+# Log file path (empty for stdout only)
+log_file = /var/log/iotronic/lightning-rod.log
+
+# Skip SSL certificate verification (for self-signed certs)
+skip_cert_verify = true
+
+[autobahn]
+# Connection timer (seconds) - time between connection attempts
+connection_timer = 10
+
+# Alive timer (seconds) - interval for keep-alive checks
+alive_timer = 600
+
+# RPC alive timer (seconds) - timeout for RPC responses
+rpc_alive_timer = 3
+
+# Connection failure timer (seconds) - timeout before declaring connection failed
+connection_failure_timer = 600
+
+[services]
+# Path to wstun binary for service tunneling
+wstun_bin = /usr/bin/wstun
+
+[webservices]
+# Proxy type for webservice management (currently only nginx)
+proxy = nginx
